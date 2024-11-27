@@ -1,7 +1,5 @@
 import AppAddArticle from './AppAddArticle'
 import AppCard from './AppCard'
-import { useContext } from 'react'
-import PostsContext from '../context/PostsContext'
 
 export default function AppMain({ addArticle, handleFormField, formData, articles, deleteArticle }) {
 	return (
