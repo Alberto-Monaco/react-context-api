@@ -1,10 +1,13 @@
-import AppMain from '../components/AppMain'
+import PostsList from './PostsList'
+import Navbar from './Navbar'
 
-export default function PostsList({ addArticle, handleFormField, formData, articles, deleteArticle }) {
+export default function PostsPage({ addArticle, handleFormField, formData, articles, deleteArticle }) {
 	return (
 		<>
+			<Navbar />
 			<div className='container'>
-				<AppMain
+				<h1>I nostri Post</h1>
+				<PostsList
 					addArticle={addArticle}
 					handleFormField={handleFormField}
 					formData={formData}

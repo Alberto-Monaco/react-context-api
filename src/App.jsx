@@ -4,10 +4,9 @@ import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AppHeader from './components/AppHeader'
 import PostDetail from './pages/PostDetail'
-
+import PostsPage from './pages/PostsPage'
 import HomePage from './pages/HomePage'
 import About from './pages/About'
-import PostsList from './pages/PostsList'
 
 const initialFormData = {
 	title: '',
@@ -86,7 +85,7 @@ function App() {
 					<Route
 						path='/posts'
 						element={
-							<PostsList
+							<PostsPage
 								addArticle={addArticle}
 								handleFormField={handleFormField}
 								formData={formData}
