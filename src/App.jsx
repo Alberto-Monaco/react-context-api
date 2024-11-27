@@ -76,25 +76,14 @@ function App() {
 
 	return (
 		<>
-			<PostsContext.Provider value={{}}>
+			<PostsContext.Provider value={{ articles, addArticle, handleFormField, formData, deleteArticle }}>
 				<BrowserRouter>
 					<AppHeader />
 
 					<Routes>
 						<Route index element={<HomePage />} />
 						<Route path='/about' element={<About />} />
-						<Route
-							path='/posts'
-							element={
-								<PostsPage
-									addArticle={addArticle}
-									handleFormField={handleFormField}
-									formData={formData}
-									articles={articles}
-									deleteArticle={deleteArticle}
-								/>
-							}
-						/>
+						<Route path='/posts' element={<PostsPage />} />
 						<Route path='/posts/:slug' element={<PostDetail />} />
 					</Routes>
 				</BrowserRouter>
