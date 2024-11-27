@@ -7,7 +7,7 @@ import PostDetail from './pages/PostDetail'
 import PostsPage from './pages/PostsPage'
 import HomePage from './pages/HomePage'
 import About from './pages/About'
-
+import PostsContext from './context/PostsContext'
 const initialFormData = {
 	title: '',
 	image: '1.jpg',
@@ -76,27 +76,29 @@ function App() {
 
 	return (
 		<>
-			<BrowserRouter>
-				<AppHeader />
+			<PostsContext.Provider value={{}}>
+				<BrowserRouter>
+					<AppHeader />
 
-				<Routes>
-					<Route index element={<HomePage />} />
-					<Route path='/about' element={<About />} />
-					<Route
-						path='/posts'
-						element={
-							<PostsPage
-								addArticle={addArticle}
-								handleFormField={handleFormField}
-								formData={formData}
-								articles={articles}
-								deleteArticle={deleteArticle}
-							/>
-						}
-					/>
-					<Route path='/posts/:slug' element={<PostDetail />} />
-				</Routes>
-			</BrowserRouter>
+					<Routes>
+						<Route index element={<HomePage />} />
+						<Route path='/about' element={<About />} />
+						<Route
+							path='/posts'
+							element={
+								<PostsPage
+									addArticle={addArticle}
+									handleFormField={handleFormField}
+									formData={formData}
+									articles={articles}
+									deleteArticle={deleteArticle}
+								/>
+							}
+						/>
+						<Route path='/posts/:slug' element={<PostDetail />} />
+					</Routes>
+				</BrowserRouter>
+			</PostsContext.Provider>
 		</>
 	)
 }

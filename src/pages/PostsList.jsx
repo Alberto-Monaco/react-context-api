@@ -1,4 +1,6 @@
 import AppMain from '../components/AppMain'
+import { useContext } from 'react'
+import PostsContext from '../context/PostsContext'
 
 export default function PostsList({ addArticle, handleFormField, formData, articles, deleteArticle }) {
 	return (
