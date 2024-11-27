@@ -13,26 +13,27 @@
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-nav {
+nav a {
+
+
+
     padding-bottom: 1rem;
-
-    a {
-        padding: 0.5rem 1rem;
-        font-size: 1.2rem;
-        color: white;
-        text-decoration: none;
-        border: 2px transparent;
-        border-radius: 5px;
-        margin-right: 1rem;
-        transition: all 0.3s ease;
-        background-color: #007bff;
-    }
-
-    a:hover {
-        background-color: rgb(39, 86, 255);
-        color: white;
-    }
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    border: 2px transparent;
+    border-radius: 5px;
+    margin-right: 1rem;
+    transition: all 0.3s ease;
+    background-color: #007bff;
 }
+
+nav a:hover {
+    background-color: rgb(39, 86, 255);
+    color: white;
+}
+
 
 nav a.active {
     color: white;
@@ -42,4 +43,20 @@ nav a.active {
 
 body {
     overflow-y: scroll;
+    background: linear-gradient(to right, #43c6ac, #191654);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #007bff;
+
+}
+
+body {
+    margin-top: 10rem;
+
 }

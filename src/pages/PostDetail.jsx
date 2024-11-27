@@ -16,12 +16,23 @@ export default function PostDetail() {
 
 	return (
 		<>
-			<Navbar />
 			<div className='container'>
-				<h1>{post?.title}</h1>
-				<img src={`http://localhost:3006/imgs/posts/${post?.image}`} alt={post?.title} width={500} />
-				<div className='mt-4'>{post?.content}</div>
-				<div className='mt-4'>{post?.tags.join(', ')}</div>
+				<div className='column '>
+					<div className='col-md-6'>
+						<div className='card'>
+							<div className='card-title'>
+								<h1 className='text-center'>{post?.title}</h1>
+							</div>
+							<div className='card-img text-center'>
+								<img src={`http://localhost:3006/imgs/posts/${post?.image}`} alt={post?.title} width={300} />
+							</div>
+							<div className='card-body'>
+								<div className='mt-4'>{post?.content}</div>
+								<div className='mt-4'>{post?.tags.join(', ')}</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</>
 	)
